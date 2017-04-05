@@ -9,14 +9,13 @@ class App extends Component {
     this.state = {
       showAllTime: false
     }
-
   }
-  allTime = () => {
+  allTime() {
     this.setState = ({
       showAllTime: !this.state.showAllTime
     })
   }
-  last30 = () => {
+  last30() {
     this.setState = ({
       showAllTime: this.state.showAllTime
     })
@@ -28,8 +27,8 @@ class App extends Component {
         <div className="titles">
           <p>#</p>
           <p>Camper Name</p>
-          <button className="last30" onClick={this.last30}>Points in past 30 days</button>
-          <button className="all" onClick={this.allTime}>All time points</button>
+          <button onClick={this.last30.bind(this)}>Points in past 30 days</button>
+          <button onClick={this.allTime.bind(this)}>All time points</button>
         </div>
         {this.state.showAllTime ? <AlltimeUsers /> : <RecentUsers />}
       </div>
