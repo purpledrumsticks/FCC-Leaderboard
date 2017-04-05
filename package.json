@@ -7,7 +7,7 @@
     "jquery": "^3.2.1",
     "react-scripts": "0.9.5"
   },
-  "homepage": "https://purpledrumsticks.github.io/FCC-Leaderboard",
+  "homepage": "https://purpledrumsticks.github.io/FCC-Leaderboard/",
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
