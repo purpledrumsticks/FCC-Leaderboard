@@ -26,7 +26,7 @@ class App extends Component {
       <div className="App">
         <h1>Leaderboard</h1>
         <div className="titles">
-          <p className>#</p>
+          <p>#</p>
           <p>Camper Name</p>
           <button className="last30" onClick={this.last30}>Points in past 30 days</button>
           <button className="all" onClick={this.allTime}>All time points</button>
