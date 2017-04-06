@@ -17,26 +17,18 @@ class AlltimeUsers extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <h1>Leaderboard</h1>
+      <tbody className="user">
         {this.state.users.map((user, i) => {
           return (
-            <div className='listItem' key={user.username}>
-              <div className='rank'>{i + 1}</div>
-              <div className='user'>
-                <img src={user.img} alt="user"/>
-                <p>{user.username}</p>
-              </div>
-              <div className="recentScore">
-                {user.recent}
-              </div>
-              <div className="alltimeScore">
-                {user.alltime}
-              </div>
-            </div>
+            <tr className="userTable" key={user.username}>
+              <th>{i + 1}</th>
+              <th><img src={user.img}  alt="user"/>{user.username}</th>
+              <th className="points">{user.recent}</th>
+              <th className="points">{user.alltime}</th>
+            </tr>
           )
         })}
-      </div>
+      </tbody>
     );
   }
 }

@@ -11,26 +11,30 @@ class App extends Component {
     }
   }
   allTime() {
-    this.setState = ({
-      showAllTime: !this.state.showAllTime
+    this.setState({
+      showAllTime: true
     })
   }
   last30() {
-    this.setState = ({
-      showAllTime: this.state.showAllTime
+    this.setState({
+      showAllTime: false
     })
   }
   render() {
     return (
       <div className="App">
         <h1>Leaderboard</h1>
-        <div className="titles">
-          <p>#</p>
-          <p>Camper Name</p>
-          <button onClick={this.last30.bind(this)}>Points in past 30 days</button>
-          <button onClick={this.allTime.bind(this)}>All time points</button>
-        </div>
-        {this.state.showAllTime ? <AlltimeUsers /> : <RecentUsers />}
+        <table className="theTable">
+          <thead className="titles">
+            <tr>
+              <th>#</th>
+              <th>Camper Name</th>
+              <th className="toggle" onClick={this.last30.bind(this)}>Points in past 30 days</th>
+              <th className="toggle" onClick={this.allTime.bind(this)}>All time points</th>
+            </tr>
+          </thead>
+          {this.state.showAllTime ? <AlltimeUsers /> : <RecentUsers />}
+      </table>
       </div>
     );
   }
