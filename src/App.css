@@ -1,6 +1,7 @@
 .App {
   margin: 0 auto;
   font-size: 3em;
+  color: #fff;
 }
 
 .App h1 {
@@ -9,6 +10,12 @@
 
 .theTable {
   min-width: 75vw;
+  padding: 200px;
+  padding-top: 0px;
+}
+
+th {
+  border: 1px solid;
 }
 
 .userTable img {
@@ -17,6 +24,7 @@
 }
 
 .toggle {
-  padding-right: 45px;
+  padding-right: 25px;
+  padding-left: 25px;
   cursor: pointer;
 }

@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Leaderboard</h1>
+        <h1>Free Code Camp Leaderboard</h1>
         <table className="theTable">
           <thead className="titles">
             <tr>
