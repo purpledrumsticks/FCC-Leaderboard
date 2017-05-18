@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-const $ = require('jquery');
 
-class RecentUsers extends Component {
+class Users extends Component {
   constructor(props) {
-    super(props)
-    this.state = {
-      users: []
-    }
+    super(props);
   }
-  componentDidMount() {
-      let url = 'https://fcctop100.herokuapp.com/api/fccusers/top/recent';
-      $.getJSON(url, response => {
-        this.setState({users: response})
-      })
-  }
+
   render() {
     return (
       <tbody className="user">
-        {this.state.users.map((user, i) => {
+        {this.props.users.map((user, i) => {
           return (
-            <tr className="userTable" key={user.username}>
+            <tr className="userTable" key={i + 1}>
               <th>{i + 1}</th>
               <th><img src={user.img}  alt="user"/>{user.username}</th>
               <th className="points">{user.recent}</th>
@@ -34,4 +25,5 @@ class RecentUsers extends Component {
 }
 
 
-export default RecentUsers;
+
+export default Users;
